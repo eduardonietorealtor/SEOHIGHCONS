@@ -25,70 +25,71 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- ✅ VALID JSON-LD (NO COMMENTS, NO TRAILING COMMAS) -->
+  <!-- ✅ JSON-LD #1: LocalBusiness (VALID JSON) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
+    "@type": "LocalBusiness",
+    "name": "North Bay Construction Contractors",
+    "url": "https://YOURDOMAIN.com/",
+    "telephone": "+17076713253",
+    "description": "CSLB #1149102. Contractor for remodels, repairs, and renovations in Northern California.",
+    "areaServed": [
       {
-        "@type": "LocalBusiness",
-        "name": "North Bay Construction Contractors",
-        "url": "https://YOURDOMAIN.com/",
-        "telephone": "+17076713253",
-        "description": "CSLB #1149102. Contractor for remodels, repairs, and renovations in Northern California.",
-        "areaServed": [
-          {
-            "@type": "City",
-            "name": "Ukiah",
-            "address": {
-              "@type": "PostalAddress",
-              "addressRegion": "CA",
-              "addressCountry": "US"
-            }
-          },
-          {
-            "@type": "City",
-            "name": "Santa Rosa",
-            "address": {
-              "@type": "PostalAddress",
-              "addressRegion": "CA",
-              "addressCountry": "US"
-            }
-          }
-        ],
-        "hasMap": [
-          "https://www.google.com/maps?q=198%20W%20Perkins%20St,%20Ukiah,%20CA%2095482",
-          "https://www.google.com/maps?q=3558%20Round%20Barn%20Boulevard,%20Fountaingrove%20Pkwy%20Suite%20200,%20Santa%20Rosa,%20CA%2095403"
-        ]
+        "@type": "City",
+        "name": "Ukiah",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        }
       },
       {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Do you offer estimates?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes — send your city and project details and we’ll respond quickly with next steps."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What areas do you serve?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Northern California — including Ukiah and Santa Rosa, plus nearby communities."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can you provide a written scope and timeline?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes — we keep scope and timeline clear, and communicate changes before work starts."
-            }
-          }
-        ]
+        "@type": "City",
+        "name": "Santa Rosa",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        }
+      }
+    ],
+    "hasMap": [
+      "https://www.google.com/maps?q=198%20W%20Perkins%20St,%20Ukiah,%20CA%2095482",
+      "https://www.google.com/maps?q=3558%20Round%20Barn%20Boulevard,%20Fountaingrove%20Pkwy%20Suite%20200,%20Santa%20Rosa,%20CA%2095403"
+    ]
+  }
+  </script>
+
+  <!-- ✅ JSON-LD #2: FAQPage (VALID JSON) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you offer estimates?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — send your city and project details and we’ll respond quickly with next steps."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas do you serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Northern California — including Ukiah and Santa Rosa, plus nearby communities."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you provide a written scope and timeline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — we keep scope and timeline clear, and communicate changes before work starts."
+        }
       }
     ]
   }
@@ -510,7 +511,6 @@
             <div class="muted">Leave a review on Google (fastest way to boost local ranking)</div>
           </div>
 
-          <!-- 🔥 Replace the link below with your Google review link -->
           <div style="margin-top:12px;">
             <a class="btn" target="_blank" rel="noopener"
               href="https://www.google.com/maps/search/?api=1&query=North%20Bay%20Construction%20Contractors">
