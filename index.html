@@ -1,245 +1,623 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-<title>North Bay Construction Contractors | Northern California Contractor</title>
+  <!-- SEO -->
+  <title>Eduardo Nieto Construction | Contractor & Remodeling in Northern California</title>
+  <meta name="description" content="CSLB License #1149102. Contractor for remodels, repairs, and renovations in Northern California. Fast estimates, clean work, clear communication. Call/Text 707-671-3253." />
+  <link rel="canonical" href="https://YOURDOMAIN.com/" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
 
-<meta name="description" content="CSLB License #1149102. North Bay Construction Contractors provides remodeling, repairs and renovations in Northern California. Call 707-671-3253."/>
+  <!-- Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Eduardo Nieto Construction | Contractor & Remodeling" />
+  <meta property="og:description" content="CSLB #1149102. Remodel • Repair • Renovate — fast estimates and clean workmanship. Call/Text 707-671-3253." />
+  <meta property="og:url" content="https://YOURDOMAIN.com/" />
+  <meta property="og:image" content="https://YOURDOMAIN.com/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
-<style>
+  <!-- Styles (inline for one-file copy/paste) -->
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#101a30;
+      --text:#e8edff;
+      --muted:#a9b5df;
+      --line:rgba(255,255,255,.12);
+      --accent:#4fa3ff;
+      --accent2:#6ce0c6;
+      --radius:18px;
+      --radius2:24px;
+      --shadow:0 18px 50px rgba(0,0,0,.35);
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, Arial, sans-serif;
+      background:linear-gradient(180deg,var(--bg),#070c16);
+      color:var(--text);
+      line-height:1.55;
+    }
+    .container{width:min(var(--max), calc(100% - 40px)); margin:auto}
+    a{color:inherit;text-decoration:none}
+    .muted{color:var(--muted)}
+    .tiny{font-size:12px}
+    .skip{position:absolute;left:-9999px}
+    .skip:focus{left:16px;top:16px;background:#000;padding:10px 12px;border-radius:12px;z-index:9999}
 
-/* ROOT */
-body{
-margin:0;
-font-family:Inter;
-background:#0b1220;
-color:#e8edff;
-}
+    /* Header */
+    .header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(10px);
+      background:rgba(7,12,22,.75);
+      border-bottom:1px solid var(--line);
+    }
+    .header__inner{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand__mark{
+      width:40px;height:40px;border-radius:12px;
+      display:grid;place-items:center;font-weight:800;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+    }
+    .brand__name{font-weight:800;display:block}
+    .brand__tag{font-size:12px;color:var(--muted);display:block}
 
-.container{
-width:min(1120px, calc(100% - 40px));
-margin:auto;
-}
+    /* Nav */
+    .nav{position:relative;display:flex;align-items:center;gap:12px}
+    .nav__menu{display:flex;gap:16px;align-items:center}
+    .nav__menu a{color:var(--muted)}
+    .nav__menu a:hover{color:#fff}
+    .nav__toggle{display:none;background:transparent;border:1px solid var(--line);border-radius:12px;width:42px;height:42px}
+    .nav__toggleLines{display:block;width:18px;height:2px;background:var(--text);margin:0 auto;position:relative}
+    .nav__toggleLines::before,.nav__toggleLines::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--text)}
+    .nav__toggleLines::before{top:-6px}
+    .nav__toggleLines::after{top:6px}
 
-.section{padding:60px 0}
+    /* Buttons */
+    .btn{
+      padding:12px 16px;border-radius:14px;
+      border:1px solid var(--accent);
+      background:rgba(79,163,255,.2);
+      font-weight:700;
+      display:inline-flex;align-items:center;justify-content:center;
+    }
+    .btn:hover{background:rgba(79,163,255,.35)}
+    .btn--ghost{background:transparent;border:1px solid var(--line)}
+    .btn--ghost:hover{background:rgba(255,255,255,.06)}
+    .btn--sm{padding:9px 12px;border-radius:12px;font-size:14px}
+    .btn--block{width:100%}
 
-.header{
-position:sticky;
-top:0;
-background:#0b1220;
-border-bottom:1px solid rgba(255,255,255,.1);
-}
+    /* Hero */
+    .hero{padding:80px 0;position:relative}
+    .hero__inner{display:grid;grid-template-columns:1.1fr .9fr;gap:30px}
+    .pill{
+      border:1px solid var(--line);
+      padding:8px 12px;border-radius:999px;
+      display:inline-block;font-size:13px;margin-bottom:14px;
+      background:rgba(255,255,255,.03);
+    }
+    h1{font-size:48px;margin:0 0 12px;line-height:1.05}
+    .lead{color:var(--muted);font-size:18px;margin:0}
+    .hero__cta{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+    .hero__trust{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .trustCard{border:1px solid var(--line);border-radius:var(--radius);padding:12px;background:rgba(255,255,255,.03)}
+    .trustCard__title{font-weight:800;margin-bottom:4px}
+    .trustCard__text{color:var(--muted);font-size:13px}
 
-.header__inner{
-display:flex;
-justify-content:space-between;
-padding:15px 0;
-}
+    /* Cards */
+    .card{
+      border:1px solid var(--line);
+      border-radius:var(--radius2);
+      padding:18px;
+      background:rgba(255,255,255,.03);
+      box-shadow:var(--shadow);
+    }
 
-.brand__name{font-weight:800}
+    /* Sections */
+    .section{padding:60px 0}
+    .section--alt{background:rgba(255,255,255,.02);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .sectionHead{margin-bottom:24px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .feature{border:1px solid var(--line);border-radius:var(--radius);padding:16px;background:rgba(255,255,255,.03)}
+    .bullets{padding-left:18px;color:var(--muted)}
+    .bullets li{margin:6px 0}
 
-.hero{padding:80px 0}
+    /* Projects */
+    .listing{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:rgba(255,255,255,.03)}
+    .listing__img{height:150px;background:linear-gradient(135deg,var(--accent),var(--accent2));opacity:.18}
+    .listing__body{padding:14px}
+    .link{color:var(--accent);font-weight:800}
+    .link:hover{text-decoration:underline}
 
-.hero__inner{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-}
+    /* FAQ */
+    .faq details{border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;background:rgba(255,255,255,.03)}
+    .faq details + details{margin-top:10px}
+    .faq summary{cursor:pointer;font-weight:800}
+    .faq__body{margin-top:10px;color:var(--muted)}
 
-.card{
-border:1px solid rgba(255,255,255,.1);
-padding:20px;
-border-radius:20px;
-}
+    /* Form */
+    .form{display:grid;gap:12px;margin-top:12px}
+    label{display:grid;gap:6px;font-size:13px;color:var(--muted)}
+    input,select,textarea{
+      padding:10px;border-radius:12px;border:1px solid var(--line);
+      background:rgba(0,0,0,.2);color:#fff;font:inherit
+    }
+    textarea{resize:vertical}
 
-.btn{
-padding:12px 16px;
-border:1px solid #4fa3ff;
-background:#4fa3ff22;
-border-radius:12px;
-color:white;
-font-weight:bold;
-display:inline-block;
-text-decoration:none;
-}
+    /* Contact */
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+    .contact__cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+    .contactCard{border:1px solid var(--line);border-radius:16px;padding:14px;background:rgba(255,255,255,.03)}
+    .contactCard:hover{background:rgba(255,255,255,.06)}
+    .contactCard__title{font-weight:900;margin-bottom:4px}
+    .contactCard__text{color:var(--muted);font-size:13px}
 
-.grid3{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:15px;
-}
+    /* PRO MAPS */
+    .mapSection{margin-top:30px}
+    .mapSection__title{margin:0 0 12px;font-size:18px}
+    .mapGrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:15px}
+    .mapCard{border:1px solid var(--line);border-radius:16px;padding:12px;background:rgba(255,255,255,.03)}
+    .mapFrame{border-radius:16px;overflow:hidden;margin-bottom:8px;border:1px solid var(--line)}
+    .mapFrame iframe{width:100%;height:240px;border:0;display:block}
 
-.feature{
-border:1px solid rgba(255,255,255,.1);
-padding:15px;
-border-radius:15px;
-}
+    /* Footer */
+    .footer{padding:20px 0;border-top:1px solid var(--line)}
+    .footer__inner{display:flex;justify-content:space-between;gap:16px;align-items:center}
+    .footer__brand{font-weight:900}
+    .footer__links{display:flex;gap:14px;color:var(--muted)}
+    .footer__links a:hover{color:#fff}
 
-.contact{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-}
+    /* Mobile */
+    @media(max-width:900px){
+      .hero__inner{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+      .hero__trust{grid-template-columns:1fr}
+      .contact__cards{grid-template-columns:1fr}
+      .mapGrid{grid-template-columns:1fr}
 
-.mapGrid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:15px;
-margin-top:15px;
-}
+      .nav__toggle{display:inline-flex;align-items:center;justify-content:center}
+      .nav__menu{
+        display:none;
+        position:absolute;
+        right:0;
+        top:54px;
+        padding:12px;
+        border-radius:16px;
+        border:1px solid var(--line);
+        background:rgba(7,12,22,.95);
+        flex-direction:column;
+        min-width:200px;
+        box-shadow:var(--shadow);
+      }
+      .nav__menu.isOpen{display:flex}
+      .nav__menu a{padding:10px;border-radius:12px}
+      .nav__menu a:hover{background:rgba(255,255,255,.06)}
+    }
+  </style>
 
-.mapFrame iframe{
-width:100%;
-height:250px;
-border:0;
-}
-
-@media(max-width:900px){
-.hero__inner{grid-template-columns:1fr}
-.grid3{grid-template-columns:1fr}
-.contact{grid-template-columns:1fr}
-.mapGrid{grid-template-columns:1fr}
-}
-
-</style>
+  <!-- LocalBusiness Schema (edit YOURDOMAIN if desired) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Eduardo Nieto Construction",
+    "url":"https://YOURDOMAIN.com/",
+    "telephone":"+17076713253",
+    "description":"CSLB #1149102. Contractor for remodels, repairs, and renovations in Northern California.",
+    "areaServed":[
+      {"@type":"City","name":"Ukiah","address":{"@type":"PostalAddress","addressRegion":"CA","addressCountry":"US"}},
+      {"@type":"City","name":"Santa Rosa","address":{"@type":"PostalAddress","addressRegion":"CA","addressCountry":"US"}}
+    ],
+    "hasMap":[
+      "https://www.google.com/maps?q=198%20W%20Perkins%20St,%20Ukiah,%20CA%2095482",
+      "https://www.google.com/maps?q=3558%20Round%20Barn%20Boulevard,%20Fountaingrove%20Pkwy%20Suite%20200,%20Santa%20Rosa,%20CA%2095403"
+    ]
+  }
+  </script>
 </head>
 
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-<header class="header">
-<div class="container header__inner">
-<div class="brand__name">North Bay Construction Contractors</div>
-<a class="btn" href="#contact">Get Quote</a>
-</div>
-</header>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand__mark" aria-hidden="true">EN</span>
+        <span class="brand__text">
+          <span class="brand__name">Eduardo Nieto Construction</span>
+          <span class="brand__tag">Remodeling • Repairs • Northern CA</span>
+        </span>
+      </a>
 
-<main>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+          <span class="nav__toggleLines" aria-hidden="true"></span>
+        </button>
 
-<!-- HERO -->
-<section class="hero">
-<div class="container hero__inner">
+        <div class="nav__menu" id="navMenu">
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact" class="btn btn--sm btn--ghost">Get a Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-<div>
-<h1>Contractor & Remodeling in Northern California</h1>
-<p>CSLB License #1149102 — Fast estimates, clean work, and reliable service.</p>
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="pill">Remodel • Repair • Renovate</p>
+          <h1>Contractor & Remodeling in Northern California</h1>
+          <p class="lead">
+            Fast estimates, clean workmanship, and clear communication — serving Ukiah, Santa Rosa, and nearby areas.
+          </p>
 
-<a class="btn" href="tel:+17076713253">Call 707-671-3253</a>
+          <div class="hero__cta">
+            <a class="btn" href="tel:+17076713253">Call/Text 707-671-3253</a>
+            <a class="btn btn--ghost" href="#contact">Request a free estimate</a>
+          </div>
 
-</div>
+          <div class="hero__trust">
+            <div class="trustCard">
+              <div class="trustCard__title">Fast estimates</div>
+              <div class="trustCard__text">Clear scope + realistic timelines.</div>
+            </div>
+            <div class="trustCard">
+              <div class="trustCard__title">Clean work</div>
+              <div class="trustCard__text">Respectful jobsite + tidy finish.</div>
+            </div>
+            <div class="trustCard">
+              <div class="trustCard__title">No surprises</div>
+              <div class="trustCard__text">Updates + documented changes.</div>
+            </div>
+          </div>
 
-<div class="card">
+          <p class="tiny muted" style="margin-top:14px;">
+            CSLB License #1149102
+          </p>
+        </div>
 
-<h2>Request Estimate</h2>
+        <!-- HERO FORM -->
+        <div class="hero__card">
+          <div class="card">
+            <h2>Request an estimate</h2>
+            <p class="muted">Send details — we’ll follow up quickly.</p>
 
-<form action="https://formspree.io/f/xwvnogvq" method="POST">
+            <form class="form" action="https://formspree.io/f/xwvnogvq" method="POST">
+              <input type="hidden" name="_subject" value="New Website Lead - Estimate Request">
+              <input type="text" name="_gotcha" style="display:none">
 
-<input name="name" placeholder="Name" required>
-<input name="phone" placeholder="Phone" required>
-<input name="city" placeholder="City">
+              <label>
+                Name
+                <input name="name" autocomplete="name" required placeholder="Your name" />
+              </label>
 
-<textarea name="message" placeholder="Project details"></textarea>
+              <label>
+                Phone
+                <input name="phone" autocomplete="tel" required placeholder="(707) 555-1234" />
+              </label>
 
-<button class="btn">Send</button>
+              <label>
+                City
+                <input name="city" autocomplete="address-level2" required placeholder="Ukiah / Santa Rosa / ..." />
+              </label>
 
-</form>
+              <label>
+                Service needed
+                <select name="service" required>
+                  <option value="" selected disabled>Select one</option>
+                  <option>Kitchen remodel</option>
+                  <option>Bathroom remodel</option>
+                  <option>Interior paint / drywall / trim</option>
+                  <option>Flooring</option>
+                  <option>Exterior / deck / fence</option>
+                  <option>Repairs / maintenance</option>
+                  <option>Other</option>
+                </select>
+              </label>
 
-</div>
+              <label>
+                Timeline
+                <select name="timeline" required>
+                  <option value="" selected disabled>Select one</option>
+                  <option>ASAP</option>
+                  <option>2–4 weeks</option>
+                  <option>1–3 months</option>
+                  <option>Just planning</option>
+                </select>
+              </label>
 
-</div>
-</section>
+              <label>
+                Details (optional)
+                <textarea name="message" rows="3" placeholder="What do you need help with? Add materials, measurements, budget notes..."></textarea>
+              </label>
 
-<!-- SERVICES -->
-<section class="section">
-<div class="container">
+              <button class="btn btn--block" type="submit">Send request</button>
 
-<h2>Services</h2>
+              <p class="tiny muted">
+                Prefer texting? <a class="link" href="sms:+17076713253">Tap to text</a>.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="grid3">
+    <!-- SERVICES -->
+    <section id="services" class="section section--alt">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>Services</h2>
+          <p class="muted">Straightforward construction help — done clean and on schedule.</p>
+        </div>
 
-<div class="feature">
-<h3>Remodeling</h3>
-<p>Kitchen, bath, and interior improvements.</p>
-</div>
+        <div class="grid3">
+          <article class="feature">
+            <h3>Remodels</h3>
+            <p class="muted">Kitchen and bathroom remodels, refreshes, and upgrades.</p>
+            <ul class="bullets">
+              <li>Drywall, trim, paint</li>
+              <li>Flooring & tile (as applicable)</li>
+              <li>Finish details</li>
+            </ul>
+          </article>
 
-<div class="feature">
-<h3>Repairs</h3>
-<p>Dry rot repair, maintenance and upgrades.</p>
-</div>
+          <article class="feature">
+            <h3>Repairs & Maintenance</h3>
+            <p class="muted">Small fixes that prevent big problems later.</p>
+            <ul class="bullets">
+              <li>Dry rot repair</li>
+              <li>Doors/windows</li>
+              <li>Punch lists</li>
+            </ul>
+          </article>
 
-<div class="feature">
-<h3>Exterior</h3>
-<p>Decks, fences, and exterior projects.</p>
-</div>
+          <article class="feature">
+            <h3>Exterior</h3>
+            <p class="muted">Decks, fences, and exterior improvements.</p>
+            <ul class="bullets">
+              <li>Deck/fence repair</li>
+              <li>Gutters & drainage</li>
+              <li>Exterior touchups</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-</div>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>Recent projects</h2>
+          <p class="muted">Add real before/after photos for the biggest trust + SEO boost.</p>
+        </div>
 
-</div>
-</section>
+        <div class="grid3">
+          <article class="listing">
+            <div class="listing__img" aria-hidden="true"></div>
+            <div class="listing__body">
+              <h3>Bathroom refresh</h3>
+              <p class="muted">Vanity • paint • fixtures • cleanup</p>
+              <a class="link" href="#contact">Get a quote →</a>
+            </div>
+          </article>
 
-<!-- CONTACT -->
-<section id="contact" class="section">
+          <article class="listing">
+            <div class="listing__img" aria-hidden="true"></div>
+            <div class="listing__body">
+              <h3>Interior paint + trim</h3>
+              <p class="muted">Walls • baseboards • doors • touchups</p>
+              <a class="link" href="#contact">Pricing →</a>
+            </div>
+          </article>
 
-<div class="container contact">
+          <article class="listing">
+            <div class="listing__img" aria-hidden="true"></div>
+            <div class="listing__body">
+              <h3>Deck / fence repairs</h3>
+              <p class="muted">Replace boards • reinforce • stain</p>
+              <a class="link" href="#contact">Schedule walk-through →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<div>
+    <!-- REVIEWS -->
+    <section id="reviews" class="section section--alt">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>What clients say</h2>
+          <p class="muted">Swap in real reviews anytime.</p>
+        </div>
 
-<h2>Contact</h2>
+        <div class="grid3">
+          <article class="feature">
+            <h3>On time and clean work</h3>
+            <p class="muted">“Showed up on time, worked clean, and the job came out solid.”</p>
+          </article>
+          <article class="feature">
+            <h3>Clear estimate</h3>
+            <p class="muted">“Estimate was clear and communication was consistent.”</p>
+          </article>
+          <article class="feature">
+            <h3>No surprises</h3>
+            <p class="muted">“Good work, clean finish, and no surprises.”</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<a class="btn" href="tel:+17076713253">Call</a>
-<a class="btn" href="sms:+17076713253">Text</a>
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>FAQ</h2>
+          <p class="muted">Quick answers to common questions.</p>
+        </div>
 
-<div class="mapGrid">
+        <div class="faq">
+          <details>
+            <summary>Do you offer estimates?</summary>
+            <div class="faq__body">
+              Yes — send your city and project details and we’ll respond quickly.
+            </div>
+          </details>
 
-<div>
-<h4>Ukiah Office</h4>
-<div class="mapFrame">
-<iframe src="https://www.google.com/maps?q=198%20W%20Perkins%20St,%20Ukiah,%20CA%2095482&output=embed"></iframe>
-</div>
-</div>
+          <details>
+            <summary>What areas do you serve?</summary>
+            <div class="faq__body">
+              Northern California — including Ukiah and Santa Rosa, plus nearby communities.
+            </div>
+          </details>
 
-<div>
-<h4>Santa Rosa Office</h4>
-<div class="mapFrame">
-<iframe src="https://www.google.com/maps?q=3558%20Round%20Barn%20Boulevard,%20Fountaingrove%20Pkwy%20Suite%20200,%20Santa%20Rosa,%20CA%2095403&output=embed"></iframe>
-</div>
-</div>
+          <details>
+            <summary>Can you provide a written scope and timeline?</summary>
+            <div class="faq__body">
+              Yes — we keep scope and timeline clear, and communicate changes before work starts.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
 
-</div>
+    <!-- CONTACT (with two pro maps) -->
+    <section id="contact" class="section section--alt">
+      <div class="container contact">
+        <div class="contact__info">
+          <h2>Get a quote</h2>
+          <p class="lead">Call or text, or send a message and we’ll reach out quickly.</p>
 
-</div>
+          <div class="contact__cards">
+            <a class="contactCard" href="tel:+17076713253">
+              <div class="contactCard__title">Call</div>
+              <div class="contactCard__text">707-671-3253</div>
+            </a>
 
-<div class="card">
+            <a class="contactCard" href="sms:+17076713253">
+              <div class="contactCard__title">Text</div>
+              <div class="contactCard__text">Tap to message</div>
+            </a>
+          </div>
 
-<h3>Send Message</h3>
+          <div class="mapSection">
+            <h3 class="mapSection__title">Service Locations</h3>
 
-<form action="https://formspree.io/f/xwvnogvq" method="POST">
+            <div class="mapGrid">
+              <div class="mapCard">
+                <h4>Ukiah Office</h4>
+                <div class="mapFrame">
+                  <iframe
+                    src="https://www.google.com/maps?q=198%20W%20Perkins%20St,%20Ukiah,%20CA%2095482&output=embed"
+                    loading="lazy"
+                    allowfullscreen>
+                  </iframe>
+                </div>
+                <p class="tiny muted">198 W Perkins St, Ukiah, CA 95482</p>
+              </div>
 
-<input name="name" placeholder="Name" required>
-<input name="phone" placeholder="Phone" required>
+              <div class="mapCard">
+                <h4>Santa Rosa Office</h4>
+                <div class="mapFrame">
+                  <iframe
+                    src="https://www.google.com/maps?q=3558%20Round%20Barn%20Boulevard,%20Fountaingrove%20Pkwy%20Suite%20200,%20Santa%20Rosa,%20CA%2095403&output=embed"
+                    loading="lazy"
+                    allowfullscreen>
+                  </iframe>
+                </div>
+                <p class="tiny muted">3558 Round Barn Blvd, Suite 200, Santa Rosa, CA 95403</p>
+              </div>
+            </div>
+          </div>
 
-<textarea name="message" placeholder="Message"></textarea>
+          <p class="tiny muted" style="margin-top:14px;">CSLB License #1149102</p>
+        </div>
 
-<button class="btn">Send</button>
+        <div class="contact__form card">
+          <h3>Send a message</h3>
 
-</form>
+          <form class="form" action="https://formspree.io/f/xwvnogvq" method="POST">
+            <input type="hidden" name="_subject" value="New Website Lead - Contact Form">
+            <input type="text" name="_gotcha" style="display:none">
 
-</div>
+            <label>
+              Name
+              <input name="name" required placeholder="Your name" />
+            </label>
 
-</div>
+            <label>
+              Phone
+              <input name="phone" required placeholder="Your phone" />
+            </label>
 
-</section>
+            <label>
+              City
+              <input name="city" placeholder="City" />
+            </label>
 
-</main>
+            <label>
+              Message
+              <textarea name="message" rows="4" required placeholder="What do you need help with?"></textarea>
+            </label>
 
-<footer class="section">
-<div class="container">
-North Bay Construction Contractors — CSLB License #1149102
-</div>
-</footer>
+            <button class="btn btn--block" type="submit">Send message</button>
 
+            <p class="tiny muted">
+              If the form doesn’t submit, call/text <a class="link" href="tel:+17076713253">707-671-3253</a>.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <div class="footer__brand">Eduardo Nieto Construction</div>
+        <div class="tiny muted">CSLB License #1149102 • © <span id="year"></span></div>
+      </div>
+      <div class="footer__links">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const toggle = document.querySelector(".nav__toggle");
+    const menu = document.querySelector("#navMenu");
+    if (toggle && menu) {
+      toggle.addEventListener("click", () => {
+        const open = menu.classList.toggle("isOpen");
+        toggle.setAttribute("aria-expanded", String(open));
+      });
+      menu.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", () => {
+          menu.classList.remove("isOpen");
+          toggle.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
