@@ -4,18 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <!-- SEO -->
-  <title>Eduardo Nieto Construction | Contractor & Remodeling in Northern California</title>
-  <meta name="description" content="CSLB License #1149102. Contractor for remodels, repairs, and renovations in Northern California. Fast estimates, clean work, clear communication. Call/Text 707-671-3253." />
+  <!-- ✅ SEO TITLE + META (LOCAL INTENT) -->
+  <title>North Bay Construction Contractors | General Contractor in Ukiah & Santa Rosa, CA</title>
+  <meta name="description" content="CSLB #1149102. North Bay Construction Contractors provides remodeling, repairs, and renovations in Ukiah, Santa Rosa, and Northern California. Fast estimates. Call/Text 707-671-3253." />
   <link rel="canonical" href="https://YOURDOMAIN.com/" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="theme-color" content="#0b1220" />
 
-  <!-- Social -->
+  <!-- ✅ Open Graph / Social -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Eduardo Nieto Construction | Contractor & Remodeling" />
-  <meta property="og:description" content="CSLB #1149102. Remodel • Repair • Renovate — fast estimates and clean workmanship. Call/Text 707-671-3253." />
+  <meta property="og:title" content="North Bay Construction Contractors | Ukiah & Santa Rosa Contractor" />
+  <meta property="og:description" content="CSLB #1149102. Remodels • Repairs • Renovations in Ukiah, Santa Rosa & Northern CA. Call/Text 707-671-3253." />
   <meta property="og:url" content="https://YOURDOMAIN.com/" />
-  <meta property="og:image" content="https://YOURDOMAIN.com/og-image.jpg" />
+  <!-- Optional: add an image file in your repo and enable the next line -->
+  <!-- <meta property="og:image" content="https://YOURDOMAIN.com/og-image.jpg" /> -->
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Fonts -->
@@ -23,11 +25,78 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Styles (inline for one-file copy/paste) -->
+  <!-- ✅ VALID JSON-LD (NO COMMENTS, NO TRAILING COMMAS) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "name": "North Bay Construction Contractors",
+        "url": "https://YOURDOMAIN.com/",
+        "telephone": "+17076713253",
+        "description": "CSLB #1149102. Contractor for remodels, repairs, and renovations in Northern California.",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Ukiah",
+            "address": {
+              "@type": "PostalAddress",
+              "addressRegion": "CA",
+              "addressCountry": "US"
+            }
+          },
+          {
+            "@type": "City",
+            "name": "Santa Rosa",
+            "address": {
+              "@type": "PostalAddress",
+              "addressRegion": "CA",
+              "addressCountry": "US"
+            }
+          }
+        ],
+        "hasMap": [
+          "https://www.google.com/maps?q=198%20W%20Perkins%20St,%20Ukiah,%20CA%2095482",
+          "https://www.google.com/maps?q=3558%20Round%20Barn%20Boulevard,%20Fountaingrove%20Pkwy%20Suite%20200,%20Santa%20Rosa,%20CA%2095403"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you offer estimates?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — send your city and project details and we’ll respond quickly with next steps."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What areas do you serve?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Northern California — including Ukiah and Santa Rosa, plus nearby communities."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you provide a written scope and timeline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — we keep scope and timeline clear, and communicate changes before work starts."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <style>
     :root{
       --bg:#0b1220;
-      --panel:#101a30;
       --text:#e8edff;
       --muted:#a9b5df;
       --line:rgba(255,255,255,.12);
@@ -96,7 +165,7 @@
     .btn--block{width:100%}
 
     /* Hero */
-    .hero{padding:80px 0;position:relative}
+    .hero{padding:80px 0}
     .hero__inner{display:grid;grid-template-columns:1.1fr .9fr;gap:30px}
     .pill{
       border:1px solid var(--line);
@@ -136,6 +205,16 @@
     .listing__body{padding:14px}
     .link{color:var(--accent);font-weight:800}
     .link:hover{text-decoration:underline}
+
+    /* Reviews block (visual stars) */
+    .stars{display:inline-flex;gap:4px;vertical-align:middle}
+    .star{
+      width:16px;height:16px;display:inline-block;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      clip-path:polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      opacity:.95;
+    }
+    .reviewRow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 
     /* FAQ */
     .faq details{border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;background:rgba(255,255,255,.03)}
@@ -195,7 +274,7 @@
         border:1px solid var(--line);
         background:rgba(7,12,22,.95);
         flex-direction:column;
-        min-width:200px;
+        min-width:220px;
         box-shadow:var(--shadow);
       }
       .nav__menu.isOpen{display:flex}
@@ -203,26 +282,6 @@
       .nav__menu a:hover{background:rgba(255,255,255,.06)}
     }
   </style>
-
-  <!-- LocalBusiness Schema (edit YOURDOMAIN if desired) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"Eduardo Nieto Construction",
-    "url":"https://YOURDOMAIN.com/",
-    "telephone":"+17076713253",
-    "description":"CSLB #1149102. Contractor for remodels, repairs, and renovations in Northern California.",
-    "areaServed":[
-      {"@type":"City","name":"Ukiah","address":{"@type":"PostalAddress","addressRegion":"CA","addressCountry":"US"}},
-      {"@type":"City","name":"Santa Rosa","address":{"@type":"PostalAddress","addressRegion":"CA","addressCountry":"US"}}
-    ],
-    "hasMap":[
-      "https://www.google.com/maps?q=198%20W%20Perkins%20St,%20Ukiah,%20CA%2095482",
-      "https://www.google.com/maps?q=3558%20Round%20Barn%20Boulevard,%20Fountaingrove%20Pkwy%20Suite%20200,%20Santa%20Rosa,%20CA%2095403"
-    ]
-  }
-  </script>
 </head>
 
 <body>
@@ -231,15 +290,15 @@
   <header class="header">
     <div class="container header__inner">
       <a class="brand" href="#top" aria-label="Home">
-        <span class="brand__mark" aria-hidden="true">EN</span>
-        <span class="brand__text">
-          <span class="brand__name">Eduardo Nieto Construction</span>
-          <span class="brand__tag">Remodeling • Repairs • Northern CA</span>
+        <span class="brand__mark" aria-hidden="true">NB</span>
+        <span>
+          <span class="brand__name">North Bay Construction Contractors</span>
+          <span class="brand__tag">Remodeling • Repairs • Northern California</span>
         </span>
       </a>
 
       <nav class="nav" aria-label="Primary">
-        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
           <span class="nav__toggleLines" aria-hidden="true"></span>
         </button>
 
@@ -258,11 +317,11 @@
     <!-- HERO -->
     <section class="hero" id="top">
       <div class="container hero__inner">
-        <div class="hero__copy">
+        <div>
           <p class="pill">Remodel • Repair • Renovate</p>
-          <h1>Contractor & Remodeling in Northern California</h1>
+          <h1>General Contractor in Ukiah & Santa Rosa, CA</h1>
           <p class="lead">
-            Fast estimates, clean workmanship, and clear communication — serving Ukiah, Santa Rosa, and nearby areas.
+            CSLB #1149102. Fast estimates, clean workmanship, and clear communication across Northern California.
           </p>
 
           <div class="hero__cta">
@@ -285,73 +344,67 @@
             </div>
           </div>
 
-          <p class="tiny muted" style="margin-top:14px;">
-            CSLB License #1149102
-          </p>
+          <p class="tiny muted" style="margin-top:14px;">CSLB License #1149102</p>
         </div>
 
         <!-- HERO FORM -->
-        <div class="hero__card">
-          <div class="card">
-            <h2>Request an estimate</h2>
-            <p class="muted">Send details — we’ll follow up quickly.</p>
+        <div class="card">
+          <h2>Request an estimate</h2>
+          <p class="muted">Send details — we’ll follow up quickly.</p>
 
-            <form class="form" action="https://formspree.io/f/xwvnogvq" method="POST">
-              <input type="hidden" name="_subject" value="New Website Lead - Estimate Request">
-              <input type="text" name="_gotcha" style="display:none">
+          <form class="form" action="https://formspree.io/f/xwvnogvq" method="POST">
+            <input type="hidden" name="_subject" value="New Website Lead - Estimate Request">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
-              <label>
-                Name
-                <input name="name" autocomplete="name" required placeholder="Your name" />
-              </label>
+            <label>
+              Name
+              <input name="name" autocomplete="name" required placeholder="Your name" />
+            </label>
 
-              <label>
-                Phone
-                <input name="phone" autocomplete="tel" required placeholder="(707) 555-1234" />
-              </label>
+            <label>
+              Phone
+              <input name="phone" autocomplete="tel" required placeholder="(707) 555-1234" />
+            </label>
 
-              <label>
-                City
-                <input name="city" autocomplete="address-level2" required placeholder="Ukiah / Santa Rosa / ..." />
-              </label>
+            <label>
+              City
+              <input name="city" autocomplete="address-level2" required placeholder="Ukiah / Santa Rosa / ..." />
+            </label>
 
-              <label>
-                Service needed
-                <select name="service" required>
-                  <option value="" selected disabled>Select one</option>
-                  <option>Kitchen remodel</option>
-                  <option>Bathroom remodel</option>
-                  <option>Interior paint / drywall / trim</option>
-                  <option>Flooring</option>
-                  <option>Exterior / deck / fence</option>
-                  <option>Repairs / maintenance</option>
-                  <option>Other</option>
-                </select>
-              </label>
+            <label>
+              Service needed
+              <select name="service" required>
+                <option value="" selected disabled>Select one</option>
+                <option>Kitchen remodel</option>
+                <option>Bathroom remodel</option>
+                <option>Interior paint / drywall / trim</option>
+                <option>Flooring</option>
+                <option>Exterior / deck / fence</option>
+                <option>Repairs / maintenance</option>
+                <option>Other</option>
+              </select>
+            </label>
 
-              <label>
-                Timeline
-                <select name="timeline" required>
-                  <option value="" selected disabled>Select one</option>
-                  <option>ASAP</option>
-                  <option>2–4 weeks</option>
-                  <option>1–3 months</option>
-                  <option>Just planning</option>
-                </select>
-              </label>
+            <label>
+              Timeline
+              <select name="timeline" required>
+                <option value="" selected disabled>Select one</option>
+                <option>ASAP</option>
+                <option>2–4 weeks</option>
+                <option>1–3 months</option>
+                <option>Just planning</option>
+              </select>
+            </label>
 
-              <label>
-                Details (optional)
-                <textarea name="message" rows="3" placeholder="What do you need help with? Add materials, measurements, budget notes..."></textarea>
-              </label>
+            <label>
+              Details (optional)
+              <textarea name="message" rows="3" placeholder="What do you need help with? Add materials, measurements, budget notes..."></textarea>
+            </label>
 
-              <button class="btn btn--block" type="submit">Send request</button>
+            <button class="btn btn--block" type="submit">Send request</button>
 
-              <p class="tiny muted">
-                Prefer texting? <a class="link" href="sms:+17076713253">Tap to text</a>.
-              </p>
-            </form>
-          </div>
+            <p class="tiny muted">Prefer texting? <a class="link" href="sms:+17076713253">Tap to text</a>.</p>
+          </form>
         </div>
       </div>
     </section>
@@ -360,8 +413,8 @@
     <section id="services" class="section section--alt">
       <div class="container">
         <div class="sectionHead">
-          <h2>Services</h2>
-          <p class="muted">Straightforward construction help — done clean and on schedule.</p>
+          <h2>Contractor services</h2>
+          <p class="muted">Remodels, repairs, and renovations with clear scope and clean results.</p>
         </div>
 
         <div class="grid3">
@@ -376,7 +429,7 @@
           </article>
 
           <article class="feature">
-            <h3>Repairs & Maintenance</h3>
+            <h3>Repairs & maintenance</h3>
             <p class="muted">Small fixes that prevent big problems later.</p>
             <ul class="bullets">
               <li>Dry rot repair</li>
@@ -390,8 +443,8 @@
             <p class="muted">Decks, fences, and exterior improvements.</p>
             <ul class="bullets">
               <li>Deck/fence repair</li>
-              <li>Gutters & drainage</li>
               <li>Exterior touchups</li>
+              <li>Prep & clean finish</li>
             </ul>
           </article>
         </div>
@@ -441,23 +494,33 @@
     <section id="reviews" class="section section--alt">
       <div class="container">
         <div class="sectionHead">
-          <h2>What clients say</h2>
-          <p class="muted">Swap in real reviews anytime.</p>
+          <h2>Google reviews</h2>
+          <p class="muted">Reviews help you rank higher locally. Ask every happy client.</p>
         </div>
 
-        <div class="grid3">
-          <article class="feature">
-            <h3>On time and clean work</h3>
-            <p class="muted">“Showed up on time, worked clean, and the job came out solid.”</p>
-          </article>
-          <article class="feature">
-            <h3>Clear estimate</h3>
-            <p class="muted">“Estimate was clear and communication was consistent.”</p>
-          </article>
-          <article class="feature">
-            <h3>No surprises</h3>
-            <p class="muted">“Good work, clean finish, and no surprises.”</p>
-          </article>
+        <div class="card">
+          <div class="reviewRow">
+            <div class="stars" aria-label="5 star rating">
+              <span class="star" aria-hidden="true"></span>
+              <span class="star" aria-hidden="true"></span>
+              <span class="star" aria-hidden="true"></span>
+              <span class="star" aria-hidden="true"></span>
+              <span class="star" aria-hidden="true"></span>
+            </div>
+            <div class="muted">Leave a review on Google (fastest way to boost local ranking)</div>
+          </div>
+
+          <!-- 🔥 Replace the link below with your Google review link -->
+          <div style="margin-top:12px;">
+            <a class="btn" target="_blank" rel="noopener"
+              href="https://www.google.com/maps/search/?api=1&query=North%20Bay%20Construction%20Contractors">
+              Review us on Google
+            </a>
+          </div>
+
+          <p class="tiny muted" style="margin-top:10px;">
+            Pro tip: text clients a direct review link right after the job is done.
+          </p>
         </div>
       </div>
     </section>
@@ -473,29 +536,23 @@
         <div class="faq">
           <details>
             <summary>Do you offer estimates?</summary>
-            <div class="faq__body">
-              Yes — send your city and project details and we’ll respond quickly.
-            </div>
+            <div class="faq__body">Yes — send your city and project details and we’ll respond quickly with next steps.</div>
           </details>
 
           <details>
             <summary>What areas do you serve?</summary>
-            <div class="faq__body">
-              Northern California — including Ukiah and Santa Rosa, plus nearby communities.
-            </div>
+            <div class="faq__body">Northern California — including Ukiah and Santa Rosa, plus nearby communities.</div>
           </details>
 
           <details>
             <summary>Can you provide a written scope and timeline?</summary>
-            <div class="faq__body">
-              Yes — we keep scope and timeline clear, and communicate changes before work starts.
-            </div>
+            <div class="faq__body">Yes — we keep scope and timeline clear, and communicate changes before work starts.</div>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT (with two pro maps) -->
+    <!-- CONTACT -->
     <section id="contact" class="section section--alt">
       <div class="container contact">
         <div class="contact__info">
@@ -515,7 +572,7 @@
           </div>
 
           <div class="mapSection">
-            <h3 class="mapSection__title">Service Locations</h3>
+            <h3 class="mapSection__title">Service locations</h3>
 
             <div class="mapGrid">
               <div class="mapCard">
@@ -524,7 +581,9 @@
                   <iframe
                     src="https://www.google.com/maps?q=198%20W%20Perkins%20St,%20Ukiah,%20CA%2095482&output=embed"
                     loading="lazy"
-                    allowfullscreen>
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen
+                    title="Ukiah Office Map">
                   </iframe>
                 </div>
                 <p class="tiny muted">198 W Perkins St, Ukiah, CA 95482</p>
@@ -536,7 +595,9 @@
                   <iframe
                     src="https://www.google.com/maps?q=3558%20Round%20Barn%20Boulevard,%20Fountaingrove%20Pkwy%20Suite%20200,%20Santa%20Rosa,%20CA%2095403&output=embed"
                     loading="lazy"
-                    allowfullscreen>
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen
+                    title="Santa Rosa Office Map">
                   </iframe>
                 </div>
                 <p class="tiny muted">3558 Round Barn Blvd, Suite 200, Santa Rosa, CA 95403</p>
@@ -552,7 +613,7 @@
 
           <form class="form" action="https://formspree.io/f/xwvnogvq" method="POST">
             <input type="hidden" name="_subject" value="New Website Lead - Contact Form">
-            <input type="text" name="_gotcha" style="display:none">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
             <label>
               Name
@@ -588,7 +649,7 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div>
-        <div class="footer__brand">Eduardo Nieto Construction</div>
+        <div class="footer__brand">North Bay Construction Contractors</div>
         <div class="tiny muted">CSLB License #1149102 • © <span id="year"></span></div>
       </div>
       <div class="footer__links">
@@ -600,7 +661,7 @@
   </footer>
 
   <script>
-    // Mobile nav
+    // Mobile nav toggle
     const toggle = document.querySelector(".nav__toggle");
     const menu = document.querySelector("#navMenu");
     if (toggle && menu) {
@@ -617,7 +678,8 @@
     }
 
     // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const y = document.getElementById("year");
+    if (y) y.textContent = String(new Date().getFullYear());
   </script>
 </body>
 </html>
