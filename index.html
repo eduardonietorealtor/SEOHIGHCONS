@@ -210,23 +210,27 @@
 
     /* Projects */
 /* Bathroom Project Photos */
-
 .bathroomPhotos {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 5px;
-  height: 220px;
-  overflow: hidden;
+  width: 100%;
+  height: 350px;
   background: #111824;
+  overflow: hidden;
 }
 
 .bathroomPhotos img {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: contain !important;
   object-position: center;
-  display: block;
+  max-width: 100%;
+  transform: none !important;
 }
+
+
     .listing{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:rgba(255,255,255,.03)}
     .listing__img{height:150px;background:linear-gradient(135deg,var(--accent),var(--accent2));opacity:.18}
     .listing__body{padding:14px}
