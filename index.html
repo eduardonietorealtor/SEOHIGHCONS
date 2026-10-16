@@ -524,6 +524,41 @@
             <div class="listing__img" aria-hidden="true"></div>
             <div class="listing__body">
               <h3>Interior paint + trim</h3>
+             
+<div class="painting-gallery">
+  <img
+    src="images/interior-painting-1.jpg"
+    alt="Interior painting project by North Bay Construction Contractors"
+    loading="lazy"
+  >
+  <img
+    src="images/interior-painting-2.jpg"
+    alt="Interior trim painting by North Bay Construction Contractors"
+    loading="lazy"
+  >
+</div>
+
+<style>
+.painting-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.painting-gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .painting-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
               <p class="muted">Walls • baseboards • doors • touchups</p>
               <a class="link" href="#contact">Pricing →</a>
             </div>
