@@ -3,47 +3,41 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Google Verification -->
   <meta name="google-site-verification" content="mtVYEl7Y_r1BYFQ5YmyXGyR3YAg7qbziL1QUeSv8DIg">
 
-  <!-- Google Ads Tracking -->
+  <!-- Google Tracking -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18405065188"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-18405065188');
-  </script>
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10802419812"></script>
-  <script>
     gtag('config', 'AW-10802419812');
   </script>
 
   <!-- SEO -->
   <title>North Bay Construction Contractors | General Contractor in Ukiah & Santa Rosa, CA</title>
 
-  <meta name="description" content="CSLB #1149102. North Bay Construction Contractors provides remodeling, repairs, renovations and painting in Ukiah, Santa Rosa and Northern California. Call/Text 707-671-3253.">
+  <meta name="description" content="CSLB #1149102. North Bay Construction Contractors provides remodeling, repairs, painting, and renovations in Ukiah, Santa Rosa and Northern California. Fast estimates. Call/Text 707-671-3253.">
 
   <link rel="canonical" href="https://northbayconstructioncontractors.com/">
 
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-
   <meta name="theme-color" content="#0b1220">
 
   <!-- Social Sharing -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="North Bay Construction Contractors | Ukiah & Santa Rosa Contractor">
-  <meta property="og:description" content="Remodels, Repairs, Painting and Renovations in Northern California. CSLB #1149102.">
+  <meta property="og:description" content="Remodels, repairs, painting and renovations in Northern California. CSLB #1149102.">
   <meta property="og:url" content="https://northbayconstructioncontractors.com/">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Local Business Structured Data -->
@@ -54,7 +48,7 @@
     "name": "North Bay Construction Contractors",
     "url": "https://northbayconstructioncontractors.com/",
     "telephone": "+17076713253",
-    "description": "CSLB #1149102. Contractor for remodels, repairs, painting, and renovations in Northern California.",
+    "description": "CSLB #1149102. Contractor for remodels, repairs, painting and renovations in Northern California.",
     "areaServed": [
       {
         "@type": "City",
@@ -118,7 +112,7 @@
 
   <style>
 
-    /* GENERAL WEBSITE SETTINGS */
+    /* GENERAL */
 
     :root {
       --bg: #0b1220;
@@ -252,6 +246,7 @@
       border-radius: 12px;
       width: 42px;
       height: 42px;
+      cursor: pointer;
     }
 
     .nav__toggleLines {
@@ -432,7 +427,7 @@
       margin: 6px 0;
     }
 
-    /* RECENT PROJECTS */
+    /* PROJECT CARDS */
 
     .listing {
       border: 1px solid var(--line);
@@ -461,7 +456,7 @@
       text-decoration: underline;
     }
 
-    /* BATHROOM PROJECT PHOTOS */
+    /* BATHROOM PHOTOS */
 
     .bathroomPhotos {
       display: grid;
@@ -477,13 +472,13 @@
       display: block;
       width: 100%;
       height: 100%;
+      max-width: 100%;
       object-fit: contain !important;
       object-position: center;
-      max-width: 100%;
       transform: none !important;
     }
 
-    /* EXTERIOR PAINTING PROJECT PHOTOS */
+    /* PAINTING PHOTOS - NO EXTRA BUBBLE */
 
     .paintingPhotos {
       display: grid;
@@ -493,16 +488,25 @@
       height: 350px;
       background: #111824;
       overflow: hidden;
+
+      /* Remove inner rounded border */
+      border: none !important;
+      border-radius: 0 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      box-shadow: none !important;
     }
 
     .paintingPhotos img {
       display: block;
       width: 100%;
       height: 100%;
+      min-width: 0;
+      max-width: 100%;
       object-fit: contain !important;
       object-position: center;
-      max-width: 100%;
-      min-width: 0;
+      border: none !important;
+      border-radius: 0 !important;
       transform: none !important;
     }
 
@@ -519,11 +523,7 @@
       height: 16px;
       display: inline-block;
       background: linear-gradient(135deg,var(--accent),var(--accent2));
-      clip-path: polygon(
-        50% 0%,61% 35%,98% 35%,68% 57%,
-        79% 91%,50% 70%,21% 91%,
-        32% 57%,2% 35%,39% 35%
-      );
+      clip-path: polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
       opacity: .95;
     }
 
@@ -557,7 +557,7 @@
       color: var(--muted);
     }
 
-    /* CONTACT FORMS */
+    /* FORMS */
 
     .form {
       display: grid;
@@ -693,31 +693,19 @@
       color: #fff;
     }
 
-    /* MOBILE RESPONSIVE */
+    /* MOBILE */
 
     @media(max-width:900px) {
 
-      .hero__inner {
-        grid-template-columns: 1fr;
-      }
-
-      .grid3 {
-        grid-template-columns: 1fr;
-      }
-
-      .contact {
-        grid-template-columns: 1fr;
-      }
-
-      .hero__trust {
-        grid-template-columns: 1fr;
-      }
-
-      .contact__cards {
-        grid-template-columns: 1fr;
-      }
-
+      .hero__inner,
+      .contact,
       .mapGrid {
+        grid-template-columns: 1fr;
+      }
+
+      .grid3,
+      .hero__trust,
+      .contact__cards {
         grid-template-columns: 1fr;
       }
 
@@ -750,12 +738,10 @@
         border-radius: 12px;
       }
 
-      .nav__menu a:hover {
-        background: rgba(255,255,255,.06);
-      }
     }
 
     @media(max-width:600px) {
+
       h1 {
         font-size: 36px;
       }
@@ -769,6 +755,7 @@
         flex-direction: column;
         align-items: flex-start;
       }
+
     }
 
   </style>
@@ -781,9 +768,11 @@
   <!-- HEADER -->
 
   <header class="header">
+
     <div class="container header__inner">
 
       <a class="brand" href="#top" aria-label="Home">
+
         <span class="brand__mark" aria-hidden="true">NB</span>
 
         <span>
@@ -795,6 +784,7 @@
             Remodeling • Repairs • Northern California
           </span>
         </span>
+
       </a>
 
       <nav class="nav" aria-label="Primary">
@@ -807,20 +797,25 @@
           aria-label="Open menu">
 
           <span class="nav__toggleLines"></span>
+
         </button>
 
         <div class="nav__menu" id="navMenu">
+
           <a href="#services">Services</a>
           <a href="#reviews">Reviews</a>
           <a href="#faq">FAQ</a>
+
           <a href="#contact" class="btn btn--sm btn--ghost">
             Get a Quote
           </a>
+
         </div>
 
       </nav>
 
     </div>
+
   </header>
 
   <main id="main">
@@ -828,6 +823,7 @@
     <!-- HERO -->
 
     <section class="hero" id="top">
+
       <div class="container hero__inner">
 
         <div>
@@ -846,6 +842,7 @@
           </p>
 
           <div class="hero__cta">
+
             <a class="btn" href="tel:+17076713253">
               Call/Text 707-671-3253
             </a>
@@ -853,35 +850,45 @@
             <a class="btn btn--ghost" href="#contact">
               Request a free estimate
             </a>
+
           </div>
 
           <div class="hero__trust">
 
             <div class="trustCard">
+
               <div class="trustCard__title">
                 Fast estimates
               </div>
+
               <div class="trustCard__text">
                 Clear scope + realistic timelines.
               </div>
+
             </div>
 
             <div class="trustCard">
+
               <div class="trustCard__title">
                 Clean work
               </div>
+
               <div class="trustCard__text">
                 Respectful jobsite + tidy finish.
               </div>
+
             </div>
 
             <div class="trustCard">
+
               <div class="trustCard__title">
                 No surprises
               </div>
+
               <div class="trustCard__text">
                 Updates + documented changes.
               </div>
+
             </div>
 
           </div>
@@ -892,7 +899,7 @@
 
         </div>
 
-        <!-- HERO ESTIMATE FORM -->
+        <!-- ESTIMATE FORM -->
 
         <div class="card">
 
@@ -921,29 +928,17 @@
 
             <label>
               Name
-              <input
-                name="name"
-                autocomplete="name"
-                required
-                placeholder="Your name">
+              <input name="name" autocomplete="name" required placeholder="Your name">
             </label>
 
             <label>
               Phone
-              <input
-                name="phone"
-                autocomplete="tel"
-                required
-                placeholder="(707) 555-1234">
+              <input name="phone" autocomplete="tel" required placeholder="(707) 555-1234">
             </label>
 
             <label>
               City
-              <input
-                name="city"
-                autocomplete="address-level2"
-                required
-                placeholder="Ukiah / Santa Rosa / ...">
+              <input name="city" autocomplete="address-level2" required placeholder="Ukiah / Santa Rosa / ...">
             </label>
 
             <label>
@@ -960,6 +955,7 @@
                 <option>Repairs / maintenance</option>
                 <option>Other</option>
               </select>
+
             </label>
 
             <label>
@@ -972,6 +968,7 @@
                 <option>1–3 months</option>
                 <option>Just planning</option>
               </select>
+
             </label>
 
             <label>
@@ -981,6 +978,7 @@
                 name="message"
                 rows="3"
                 placeholder="What do you need help with? Add materials, measurements, budget notes..."></textarea>
+
             </label>
 
             <button class="btn btn--block" type="submit">
@@ -995,9 +993,11 @@
             </p>
 
           </form>
+
         </div>
 
       </div>
+
     </section>
 
     <!-- SERVICES -->
@@ -1007,16 +1007,19 @@
       <div class="container">
 
         <div class="sectionHead">
+
           <h2>Contractor services</h2>
 
           <p class="muted">
             Remodels, repairs, and renovations with clear scope and clean results.
           </p>
+
         </div>
 
         <div class="grid3">
 
           <article class="feature">
+
             <h3>Remodels</h3>
 
             <p class="muted">
@@ -1028,9 +1031,11 @@
               <li>Flooring & tile (as applicable)</li>
               <li>Finish details</li>
             </ul>
+
           </article>
 
           <article class="feature">
+
             <h3>Repairs & maintenance</h3>
 
             <p class="muted">
@@ -1042,9 +1047,11 @@
               <li>Doors/windows</li>
               <li>Punch lists</li>
             </ul>
+
           </article>
 
           <article class="feature">
+
             <h3>Exterior</h3>
 
             <p class="muted">
@@ -1056,10 +1063,13 @@
               <li>Exterior touchups</li>
               <li>Prep & clean finish</li>
             </ul>
+
           </article>
 
         </div>
+
       </div>
+
     </section>
 
     <!-- RECENT PROJECTS -->
@@ -1093,6 +1103,7 @@
             </div>
 
             <div class="listing__body">
+
               <h3>Bathroom refresh</h3>
 
               <p class="muted">
@@ -1102,19 +1113,22 @@
               <a class="link" href="#contact">
                 Get a quote →
               </a>
+
             </div>
 
           </article>
 
-          <!-- INTERIOR AND EXTERIOR PAINTING PROJECT -->
+          <!-- PAINTING PROJECT - FIXED -->
 
           <article class="listing">
+
+            <!-- PHOTOS ARE AT THE TOP, NOT INSIDE A SECOND CARD -->
 
             <div class="paintingPhotos">
 
               <img
                 src="images/north-bay-construction-contractors-exterior-painting-ukiah-ca.jpg"
-                alt="Exterior painting project in Ukiah California by North Bay Construction Contractors"
+                alt="Exterior painting in Ukiah California by North Bay Construction Contractors"
                 loading="lazy">
 
               <img
@@ -1140,13 +1154,14 @@
 
           </article>
 
-          <!-- DECK AND FENCE REPAIRS -->
+          <!-- DECK / FENCE PROJECT -->
 
           <article class="listing">
 
             <div class="listing__img" aria-hidden="true"></div>
 
             <div class="listing__body">
+
               <h3>Deck / fence repairs</h3>
 
               <p class="muted">
@@ -1156,6 +1171,7 @@
               <a class="link" href="#contact">
                 Schedule walk-through →
               </a>
+
             </div>
 
           </article>
@@ -1163,6 +1179,7 @@
         </div>
 
       </div>
+
     </section>
 
     <!-- GOOGLE REVIEWS -->
@@ -1202,12 +1219,15 @@
               href="https://www.google.com/maps/search/?api=1&query=North%20Bay%20Construction%20Contractors">
 
               Review us on Google
+
             </a>
 
           </div>
 
         </div>
+
       </div>
+
     </section>
 
     <!-- FAQ -->
@@ -1217,41 +1237,51 @@
       <div class="container">
 
         <div class="sectionHead">
+
           <h2>FAQ</h2>
 
           <p class="muted">
             Quick answers to common questions.
           </p>
+
         </div>
 
         <div class="faq">
 
           <details>
+
             <summary>Do you offer estimates?</summary>
 
             <div class="faq__body">
               Yes — send your city and project details and we’ll respond quickly with next steps.
             </div>
+
           </details>
 
           <details>
+
             <summary>What areas do you serve?</summary>
 
             <div class="faq__body">
               Northern California — including Ukiah and Santa Rosa, plus nearby communities.
             </div>
+
           </details>
 
           <details>
+
             <summary>Can you provide a written scope and timeline?</summary>
 
             <div class="faq__body">
               Yes — we keep scope and timeline clear, and communicate changes before work starts.
             </div>
+
           </details>
 
         </div>
+
       </div>
+
     </section>
 
     <!-- CONTACT -->
@@ -1272,9 +1302,7 @@
 
             <a class="contactCard" href="tel:+17076713253">
 
-              <div class="contactCard__title">
-                Call
-              </div>
+              <div class="contactCard__title">Call</div>
 
               <div class="contactCard__text">
                 707-671-3253
@@ -1284,9 +1312,7 @@
 
             <a class="contactCard" href="sms:+17076713253">
 
-              <div class="contactCard__title">
-                Text
-              </div>
+              <div class="contactCard__title">Text</div>
 
               <div class="contactCard__text">
                 Tap to message
@@ -1296,7 +1322,7 @@
 
           </div>
 
-          <!-- SERVICE LOCATIONS -->
+          <!-- MAPS -->
 
           <div class="mapSection">
 
@@ -1306,7 +1332,7 @@
 
             <div class="mapGrid">
 
-              <!-- UKIAH MAP -->
+              <!-- UKIAH -->
 
               <div class="mapCard">
 
@@ -1330,7 +1356,7 @@
 
               </div>
 
-              <!-- SANTA ROSA MAP -->
+              <!-- SANTA ROSA -->
 
               <div class="mapCard">
 
@@ -1355,6 +1381,7 @@
               </div>
 
             </div>
+
           </div>
 
           <p class="tiny muted" style="margin-top:14px;">
@@ -1393,6 +1420,7 @@
                 name="name"
                 required
                 placeholder="Your name">
+
             </label>
 
             <label>
@@ -1402,6 +1430,7 @@
                 name="phone"
                 required
                 placeholder="Your phone">
+
             </label>
 
             <label>
@@ -1410,6 +1439,7 @@
               <input
                 name="city"
                 placeholder="City">
+
             </label>
 
             <label>
@@ -1420,23 +1450,21 @@
                 rows="4"
                 required
                 placeholder="What do you need help with?"></textarea>
+
             </label>
 
-            <button
-              class="btn btn--block"
-              type="submit">
-
+            <button class="btn btn--block" type="submit">
               Send message
             </button>
 
             <p class="tiny muted">
+
               If the form doesn’t submit, call/text
 
-              <a
-                class="link"
-                href="tel:+17076713253">
+              <a class="link" href="tel:+17076713253">
                 707-671-3253
               </a>.
+
             </p>
 
           </form>
@@ -1444,6 +1472,7 @@
         </div>
 
       </div>
+
     </section>
 
   </main>
@@ -1455,6 +1484,7 @@
     <div class="container footer__inner">
 
       <div>
+
         <div class="footer__brand">
           North Bay Construction Contractors
         </div>
@@ -1463,23 +1493,26 @@
           CSLB License #1149102 • ©
           <span id="year"></span>
         </div>
+
       </div>
 
       <div class="footer__links">
+
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+
       </div>
 
     </div>
 
   </footer>
 
-  <!-- WEBSITE JAVASCRIPT -->
+  <!-- JAVASCRIPT -->
 
   <script>
 
-    // Mobile navigation
+    // Mobile menu
 
     const toggle = document.querySelector(".nav__toggle");
     const menu = document.querySelector("#navMenu");
@@ -1503,10 +1536,7 @@
 
           menu.classList.remove("isOpen");
 
-          toggle.setAttribute(
-            "aria-expanded",
-            "false"
-          );
+          toggle.setAttribute("aria-expanded", "false");
 
         });
 
