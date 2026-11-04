@@ -258,16 +258,59 @@ a{color:inherit;text-decoration:none}
 .btn--sm{padding:9px 12px;font-size:14px}
 .btn--block{width:100%}
 
-/* HERO */
+/* HERO: LOOPING CINEMATIC VIDEO BACKGROUND */
 .hero{
+ position:relative;
+ isolation:isolate;
+ overflow:hidden;
  padding:55px 0 80px;
+ background:#0b1220 url("north-bay-construction-hero-poster.jpg") center center / cover no-repeat;
+}
+
+/* Full-width silent B-roll video */
+.hero__video{
+ position:absolute;
+ inset:0;
+ display:block;
+ width:100%;
+ height:100%;
+ object-fit:cover;
+ object-position:center;
+ z-index:0;
+ pointer-events:none;
+}
+
+/* Contrast overlay keeps headlines, buttons, and forms readable */
+.hero::before{
+ content:"";
+ position:absolute;
+ inset:0;
+ z-index:1;
+ background:linear-gradient(90deg,rgba(5,11,23,.83),rgba(5,11,23,.63) 55%,rgba(5,11,23,.77));
+ pointer-events:none;
 }
 
 .hero__inner{
+ position:relative;
+ z-index:2;
  display:grid;
  grid-template-columns:1.1fr .9fr;
  gap:30px;
  align-items:start;
+}
+
+/* Transparent hero cards show the video without sacrificing contrast */
+.hero .card{
+ background:rgba(8,16,30,.84);
+ backdrop-filter:blur(8px);
+ border-color:rgba(255,255,255,.22);
+}
+.hero .trustCard{
+ background:rgba(8,16,30,.58);
+ border-color:rgba(255,255,255,.2);
+}
+.hero .lead,.hero .trustCard__text{
+ color:#e8edff;
 }
 
 .hero__content{
@@ -703,6 +746,8 @@ textarea{resize:vertical}
 
 @media(prefers-reduced-motion:reduce){
  .paintingSlide{transition:none}
+ /* Show the still poster instead for visitors who prefer less motion */
+ .hero__video{display:none}
 }
 
 </style>
@@ -761,8 +806,23 @@ textarea{resize:vertical}
 
 <main id="main">
 
-<!-- HERO -->
+<!-- HERO: LOOPING B-ROLL BACKGROUND -->
 <section class="hero" id="top">
+
+<!-- The video and fallback poster must be in the same folder as index.html -->
+<video
+ class="hero__video"
+ autoplay
+ muted
+ loop
+ playsinline
+ preload="metadata"
+ poster="north-bay-construction-hero-poster.jpg"
+ aria-hidden="true"
+ tabindex="-1">
+ <source src="north-bay-construction-hero.mp4" type="video/mp4">
+</video>
+
 <div class="container hero__inner">
 
 <div class="hero__content">
