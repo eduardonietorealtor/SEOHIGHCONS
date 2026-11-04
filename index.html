@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -258,63 +257,47 @@ a{color:inherit;text-decoration:none}
 .btn--sm{padding:9px 12px;font-size:14px}
 .btn--block{width:100%}
 
-/* HERO: LOOPING CINEMATIC VIDEO BACKGROUND */
+/* HERO */
 .hero{
- position:relative;
- isolation:isolate;
- overflow:hidden;
  padding:55px 0 80px;
- background:#0b1220 url("north-bay-construction-hero-poster.jpg") center center / cover no-repeat;
-}
-
-/* Full-width silent B-roll video */
-.hero__video{
- position:absolute;
- inset:0;
- display:block;
- width:100%;
- height:100%;
- object-fit:cover;
- object-position:center;
- z-index:0;
- pointer-events:none;
-}
-
-/* Contrast overlay keeps headlines, buttons, and forms readable */
-.hero::before{
- content:"";
- position:absolute;
- inset:0;
- z-index:1;
- background:linear-gradient(90deg,rgba(5,11,23,.83),rgba(5,11,23,.63) 55%,rgba(5,11,23,.77));
- pointer-events:none;
 }
 
 .hero__inner{
- position:relative;
- z-index:2;
  display:grid;
  grid-template-columns:1.1fr .9fr;
  gap:30px;
  align-items:start;
 }
 
-/* Transparent hero cards show the video without sacrificing contrast */
-.hero .card{
- background:rgba(8,16,30,.84);
- backdrop-filter:blur(8px);
- border-color:rgba(255,255,255,.22);
-}
-.hero .trustCard{
- background:rgba(8,16,30,.58);
- border-color:rgba(255,255,255,.2);
-}
-.hero .lead,.hero .trustCard__text{
- color:#e8edff;
-}
-
 .hero__content{
  min-width:0;
+}
+
+/* HERO VIDEO LOOP WRAPPER */
+.hero__video-wrap{
+ position:relative;
+ width:100%;
+ height:260px;
+ margin-top:20px;
+ border-radius:16px;
+ overflow:hidden;
+ border:1px solid var(--line);
+ box-shadow:0 12px 35px rgba(0,0,0,.35);
+ background:#111824;
+}
+
+.hero__video-wrap video{
+ width:100%;
+ height:100%;
+ object-fit:cover;
+ display:block;
+}
+
+.hero__video-overlay{
+ position:absolute;
+ inset:0;
+ background:rgba(7,12,22,0.35);
+ pointer-events:none;
 }
 
 /* LARGE LOGO UNDER LICENSE NUMBER */
@@ -413,6 +396,33 @@ h1{
 
 .bullets{padding-left:18px;color:var(--muted)}
 .bullets li{margin:6px 0}
+
+/* TRAILER VIDEO SHOWCASE SECTION */
+.trailerSection{
+ margin:30px 0 40px;
+ border:1px solid var(--line);
+ border-radius:var(--radius2);
+ padding:20px;
+ background:rgba(255,255,255,.02);
+}
+
+.trailerVideoContainer{
+ position:relative;
+ width:100%;
+ aspect-ratio:16/9;
+ background:#000;
+ border-radius:14px;
+ overflow:hidden;
+ margin-top:14px;
+ border:1px solid var(--line);
+}
+
+.trailerVideoContainer video{
+ width:100%;
+ height:100%;
+ object-fit:cover;
+ display:block;
+}
 
 /* PROJECT CARDS */
 .listing{
@@ -746,8 +756,6 @@ textarea{resize:vertical}
 
 @media(prefers-reduced-motion:reduce){
  .paintingSlide{transition:none}
- /* Show the still poster instead for visitors who prefer less motion */
- .hero__video{display:none}
 }
 
 </style>
@@ -806,27 +814,8 @@ textarea{resize:vertical}
 
 <main id="main">
 
-<!-- HERO: LOOPING B-ROLL BACKGROUND -->
+<!-- HERO -->
 <section class="hero" id="top">
-
-<!-- Your original Gemini video -->
-<video
- class="hero__video"
- autoplay
- muted
- loop
- playsinline
- preload="metadata"
- poster="north-bay-construction-hero-poster.jpg"
- aria-hidden="true"
- tabindex="-1">
-
- <source
-  src="gemini_generated_video_1518f3d9(1).mp4"
-  type="video/mp4">
-
-</video>
-
 <div class="container hero__inner">
 
 <div class="hero__content">
@@ -839,6 +828,14 @@ textarea{resize:vertical}
 CSLB #1149102. Fast estimates, clean workmanship,
 and clear communication across Northern California.
 </p>
+
+<!-- HERO BACKGROUND VIDEO LOOP CONTAINER -->
+<div class="hero__video-wrap" aria-hidden="true">
+ <video autoplay muted loop playsinline preload="auto">
+  <source src="videos/hero-loop.mp4" type="video/mp4">
+ </video>
+ <div class="hero__video-overlay"></div>
+</div>
 
 <div class="hero__cta">
 
@@ -1023,6 +1020,20 @@ Decks, fences, and exterior improvements.
 </ul>
 </article>
 
+</div>
+</div>
+</section>
+
+<!-- CRAFTSMANSHIP TRAILER VIDEO SECTION -->
+<section class="container">
+<div class="trailerSection">
+<h2>Craftsmanship in Action</h2>
+<p class="muted">Watch our remodeling and construction standards.</p>
+<div class="trailerVideoContainer">
+ <video controls preload="metadata" poster="images/North-Bay-Construction-Contractors-Bay-Area-Ukiah-CA-Willits-CA-Santa-Rosa-CA.jpg">
+  <source src="videos/craftsmanship-trailer.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+ </video>
 </div>
 </div>
 </section>
