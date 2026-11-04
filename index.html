@@ -259,45 +259,38 @@ a{color:inherit;text-decoration:none}
 
 /* HERO */
 .hero{
- padding:55px 0 80px;
-}
-
-.hero__inner{
- display:grid;
- grid-template-columns:1.1fr .9fr;
- gap:30px;
- align-items:start;
-}
-
-.hero__content{
- min-width:0;
-}
-
-/* HERO VIDEO LOOP WRAPPER */
-.hero__video-wrap{
  position:relative;
- width:100%;
- height:260px;
- margin-top:20px;
- border-radius:16px;
+ padding:70px 0 90px;
  overflow:hidden;
- border:1px solid var(--line);
- box-shadow:0 12px 35px rgba(0,0,0,.35);
- background:#111824;
 }
 
-.hero__video-wrap video{
+/* FULL-WIDTH BACKGROUND VIDEO BANNER */
+.hero__video-bg{
+ position:absolute;
+ inset:0;
  width:100%;
  height:100%;
  object-fit:cover;
- display:block;
+ z-index:0;
+ pointer-events:none;
 }
 
 .hero__video-overlay{
  position:absolute;
  inset:0;
- background:rgba(7,12,22,0.35);
+ background:linear-gradient(180deg, rgba(7,12,22,0.82) 0%, rgba(11,18,32,0.90) 100%);
+ z-index:1;
  pointer-events:none;
+}
+
+/* ENSURE HERO CONTENT SITS ABOVE VIDEO */
+.hero__inner {
+ position:relative;
+ z-index:2;
+}
+
+.hero__content{
+ min-width:0;
 }
 
 /* LARGE LOGO UNDER LICENSE NUMBER */
@@ -787,8 +780,15 @@ textarea{resize:vertical}
 
 <main id="main">
 
-<!-- HERO -->
+<!-- HERO WITH FULL-WIDTH BACKGROUND VIDEO -->
 <section class="hero" id="top">
+
+<!-- FULL-WIDTH BACKGROUND VIDEO -->
+<video class="hero__video-bg" autoplay muted loop playsinline preload="auto">
+ <source src="videos/hero-loop.mp4" type="video/mp4">
+</video>
+<div class="hero__video-overlay"></div>
+
 <div class="container hero__inner">
 
 <div class="hero__content">
@@ -801,14 +801,6 @@ textarea{resize:vertical}
 CSLB #1149102. Fast estimates, clean workmanship,
 and clear communication across Northern California.
 </p>
-
-<!-- HERO BACKGROUND VIDEO LOOP CONTAINER -->
-<div class="hero__video-wrap" aria-hidden="true">
- <video autoplay muted loop playsinline preload="auto">
-  <source src="videos/hero-loop.mp4" type="video/mp4">
- </video>
- <div class="hero__video-overlay"></div>
-</div>
 
 <div class="hero__cta">
 
