@@ -8,7 +8,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'AW-18550819295');
 </script>
 <meta charset="utf-8">
@@ -264,8 +263,6 @@ a{color:inherit;text-decoration:none}
  padding:0 0 72px;
 }
 
-/* The video is now its own full-width horizontal banner,
-   independent of the tall estimate form below it. */
 .hero__cinema{
  position:relative;
  isolation:isolate;
@@ -288,13 +285,11 @@ a{color:inherit;text-decoration:none}
  display:block;
  width:100%;
  height:100%;
- /* Shows the ENTIRE 16:9 frame instead of zooming/cropping it */
  object-fit:contain;
  object-position:center center;
 }
 
-/* Audio is available by clicking this accessible control.
-   Browsers permit muted autoplay, but generally block autoplay with sound. */
+/* SOUND BUTTON */
 .hero__sound-btn{
  position:absolute;
  top:clamp(14px,2vw,28px);
@@ -313,25 +308,35 @@ a{color:inherit;text-decoration:none}
  font:700 14px/1.25 Inter,system-ui,sans-serif;
  cursor:pointer;
 }
-.hero__sound-btn:hover{background:rgba(5,12,24,.95)}
+
+.hero__sound-btn:hover{
+ background:rgba(5,12,24,.95);
+}
+
 .hero__sound-btn:focus-visible{
  outline:3px solid #6ce0c6;
  outline-offset:3px;
 }
-.hero__sound-icon{font-size:18px;line-height:1}
 
-/* Subtle shading across the bottom only, for legible heading and buttons */
+.hero__sound-icon{
+ font-size:18px;
+ line-height:1;
+}
+
+/* VIDEO OVERLAY */
 .hero__video-overlay{
  position:absolute;
  inset:0;
  z-index:1;
  pointer-events:none;
- background:linear-gradient(180deg,
-  rgba(3,9,19,.05) 0%,
-  rgba(3,9,19,.18) 45%,
-  rgba(3,9,19,.75) 100%);
+ background:linear-gradient(
+ 180deg,
+ rgba(3,9,19,.05) 0%,
+ rgba(3,9,19,.18) 45%,
+ rgba(3,9,19,.75) 100%);
 }
 
+/* TEXT OVER VIDEO */
 .hero__cinema-content{
  position:absolute;
  inset:0;
@@ -377,7 +382,30 @@ a{color:inherit;text-decoration:none}
  background:rgba(8,20,35,.95);
 }
 
-/* The trust cards, logo and lead form appear BELOW the full video. */
+/* NEW SERVICE BULLETS UNDER COMPANY NAME */
+.hero__service-list{
+ max-width:880px;
+ margin:10px 0 0;
+ padding-left:23px;
+ color:#fff;
+ font-size:clamp(14px,1.3vw,18px);
+ line-height:1.45;
+ text-shadow:0 2px 10px rgba(0,0,0,.85);
+}
+
+.hero__service-list li{
+ margin:5px 0;
+}
+
+.hero__service-area{
+ margin:7px 0 0;
+ color:#fff;
+ font-size:13px;
+ font-weight:600;
+ text-shadow:0 2px 10px rgba(0,0,0,.8);
+}
+
+/* CONTENT BELOW VIDEO */
 .hero__inner{
  display:grid;
  grid-template-columns:1.1fr .9fr;
@@ -390,7 +418,7 @@ a{color:inherit;text-decoration:none}
  min-width:0;
 }
 
-/* LARGE LOGO UNDER LICENSE NUMBER */
+/* LARGE LOGO */
 .hero__logo{
  display:block;
  width:100%;
@@ -448,8 +476,15 @@ h1{
  background:rgba(255,255,255,.03);
 }
 
-.trustCard__title{font-weight:800;margin-bottom:4px}
-.trustCard__text{color:var(--muted);font-size:13px}
+.trustCard__title{
+ font-weight:800;
+ margin-bottom:4px;
+}
+
+.trustCard__text{
+ color:var(--muted);
+ font-size:13px;
+}
 
 /* CARDS */
 .card{
@@ -461,7 +496,9 @@ h1{
 }
 
 /* SECTIONS */
-.section{padding:60px 0}
+.section{
+ padding:60px 0;
+}
 
 .section--alt{
  background:rgba(255,255,255,.02);
@@ -469,7 +506,9 @@ h1{
  border-bottom:1px solid var(--line);
 }
 
-.sectionHead{margin-bottom:24px}
+.sectionHead{
+ margin-bottom:24px;
+}
 
 .grid3{
  display:grid;
@@ -484,8 +523,14 @@ h1{
  background:rgba(255,255,255,.03);
 }
 
-.bullets{padding-left:18px;color:var(--muted)}
-.bullets li{margin:6px 0}
+.bullets{
+ padding-left:18px;
+ color:var(--muted);
+}
+
+.bullets li{
+ margin:6px 0;
+}
 
 /* PROJECT CARDS */
 .listing{
@@ -496,7 +541,9 @@ h1{
  min-width:0;
 }
 
-.listing__body{padding:14px}
+.listing__body{
+ padding:14px;
+}
 
 .listing__img{
  height:150px;
@@ -504,8 +551,14 @@ h1{
  opacity:.18;
 }
 
-.link{color:var(--accent);font-weight:800}
-.link:hover{text-decoration:underline}
+.link{
+ color:var(--accent);
+ font-weight:800;
+}
+
+.link:hover{
+ text-decoration:underline;
+}
 
 /* BATHROOM PHOTOS */
 .bathroomPhotos{
@@ -610,7 +663,9 @@ h1{
  cursor:pointer;
 }
 
-.paintingDot.active{background:#fff}
+.paintingDot.active{
+ background:#fff;
+}
 
 /* REVIEWS */
 .stars{
@@ -643,9 +698,19 @@ h1{
  background:rgba(255,255,255,.03);
 }
 
-.faq details+details{margin-top:10px}
-.faq summary{cursor:pointer;font-weight:800}
-.faq__body{margin-top:10px;color:var(--muted)}
+.faq details + details{
+ margin-top:10px;
+}
+
+.faq summary{
+ cursor:pointer;
+ font-weight:800;
+}
+
+.faq__body{
+ margin-top:10px;
+ color:var(--muted);
+}
 
 /* FORMS */
 .form{
@@ -661,7 +726,9 @@ label{
  color:var(--muted);
 }
 
-input,select,textarea{
+input,
+select,
+textarea{
  padding:10px;
  border-radius:12px;
  border:1px solid var(--line);
@@ -670,8 +737,13 @@ input,select,textarea{
  font:inherit;
 }
 
-select option{color:#111}
-textarea{resize:vertical}
+select option{
+ color:#111;
+}
+
+textarea{
+ resize:vertical;
+}
 
 /* CONTACT */
 .contact{
@@ -695,13 +767,29 @@ textarea{resize:vertical}
  background:rgba(255,255,255,.03);
 }
 
-.contactCard:hover{background:rgba(255,255,255,.06)}
-.contactCard__title{font-weight:900;margin-bottom:4px}
-.contactCard__text{color:var(--muted);font-size:13px}
+.contactCard:hover{
+ background:rgba(255,255,255,.06);
+}
+
+.contactCard__title{
+ font-weight:900;
+ margin-bottom:4px;
+}
+
+.contactCard__text{
+ color:var(--muted);
+ font-size:13px;
+}
 
 /* MAPS */
-.mapSection{margin-top:30px}
-.mapSection__title{margin:0 0 12px;font-size:18px}
+.mapSection{
+ margin-top:30px;
+}
+
+.mapSection__title{
+ margin:0 0 12px;
+ font-size:18px;
+}
 
 .mapGrid{
  display:grid;
@@ -744,13 +832,22 @@ textarea{resize:vertical}
  align-items:center;
 }
 
-.footer__brand{font-weight:900}
-.footer__links{display:flex;gap:14px;color:var(--muted)}
-.footer__links a:hover{color:#fff}
+.footer__brand{
+ font-weight:900;
+}
+
+.footer__links{
+ display:flex;
+ gap:14px;
+ color:var(--muted);
+}
+
+.footer__links a:hover{
+ color:#fff;
+}
 
 /* TABLETS */
 @media(max-width:900px){
-
  .hero__inner,
  .grid3,
  .contact,
@@ -783,34 +880,37 @@ textarea{resize:vertical}
  .nav__menu.isOpen{display:flex}
  .nav__menu a{padding:10px}
 
- .hero__logo{
-  max-width:550px;
- }
+ .hero__logo{max-width:550px}
 }
 
-/* Keep video fully visible on phones; put text below the video. */
+/* VIDEO AND TEXT ON PHONES */
 @media(max-width:700px){
  .hero__cinema{
   aspect-ratio:auto;
   overflow:visible;
  }
+
  .hero__video-wrap{
   position:relative;
   aspect-ratio:16 / 9;
   height:auto;
  }
+
  .hero__video-wrap video{
   width:100%;
   height:100%;
   object-fit:contain;
  }
+
  .hero__video-overlay{display:none}
+
  .hero__sound-btn{
   top:12px;
   right:12px;
   padding:9px 12px;
   font-size:12px;
  }
+
  .hero__cinema-content{
   position:relative;
   inset:auto;
@@ -818,20 +918,34 @@ textarea{resize:vertical}
   padding-top:24px;
   padding-bottom:0;
  }
+
  .hero__cinema-content h1{
   font-size:36px;
   text-shadow:none;
  }
+
  .hero__cinema-content .lead{
   color:var(--muted);
   text-shadow:none;
  }
+
+ .hero__service-list{
+  color:var(--text);
+  font-size:15px;
+  text-shadow:none;
+  margin-top:12px;
+ }
+
+ .hero__service-area{
+  color:var(--muted);
+  text-shadow:none;
+ }
+
  .hero__inner{padding-top:24px}
 }
 
 /* PHONES */
 @media(max-width:600px){
-
  h1{font-size:36px}
 
  .brand__logo{
@@ -863,12 +977,10 @@ textarea{resize:vertical}
  .hero__video-wrap video{display:none}
  .hero__sound-btn{display:none}
 }
-
 </style>
 </head>
 
 <body>
-
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- HEADER -->
@@ -876,7 +988,6 @@ textarea{resize:vertical}
 <div class="container header__inner">
 
 <a class="brand" href="#top" aria-label="Home">
-
 <img
  class="brand__logo"
  src="images/North-Bay-Construction-Contractors-Bay-Area-Ukiah-CA-Willits-CA-Santa-Rosa-CA.jpg"
@@ -892,7 +1003,6 @@ textarea{resize:vertical}
  Residential &amp; Commercial Construction • Remodeling
  </span>
 </span>
-
 </a>
 
 <nav class="nav" aria-label="Primary">
@@ -913,63 +1023,69 @@ textarea{resize:vertical}
  Get a Quote
  </a>
 </div>
-
 </nav>
+
 </div>
 </header>
 
 <main id="main">
 
-<!-- HERO: UNCROPPED FULL-WIDTH CINEMATIC BACKGROUND -->
+<!-- HERO: FULL-WIDTH CINEMATIC VIDEO -->
 <section class="hero" id="top">
 
-<!-- The original 16:9 video is shown edge-to-edge, without cropping. -->
 <div class="hero__cinema">
- <div class="hero__video-wrap" aria-hidden="true">
-  <video id="heroVideo" autoplay muted loop playsinline preload="metadata"
-         poster="north-bay-construction-hero-poster.jpg"
-         aria-hidden="true" tabindex="-1">
-   <source src="videos/hero-loop.mp4" type="video/mp4">
-  </video>
- </div>
- <div class="hero__video-overlay"></div>
 
- <!-- Video begins muted so it can autoplay. Click to hear its ORIGINAL audio. -->
- <button
-  class="hero__sound-btn"
-  id="heroSoundButton"
-  type="button"
-  aria-pressed="false"
-  aria-controls="heroVideo">
-  <span class="hero__sound-icon" aria-hidden="true">🔇</span>
-  <span class="hero__sound-label">Turn sound on</span>
- </button>
+<div class="hero__video-wrap" aria-hidden="true">
+ <video id="heroVideo" autoplay muted loop playsinline preload="metadata"
+        poster="north-bay-construction-hero-poster.jpg"
+        aria-hidden="true" tabindex="-1">
+  <source src="videos/hero-loop.mp4" type="video/mp4">
+ </video>
+</div>
 
- <div class="container hero__cinema-content">
+<div class="hero__video-overlay"></div>
+
+<!-- ORIGINAL VIDEO AUDIO BUTTON -->
+<button
+ class="hero__sound-btn"
+ id="heroSoundButton"
+ type="button"
+ aria-pressed="false"
+ aria-controls="heroVideo">
+ <span class="hero__sound-icon" aria-hidden="true">🔇</span>
+ <span class="hero__sound-label">Turn sound on</span>
+</button>
+
+<div class="container hero__cinema-content">
 <p class="pill">New Construction • Roofing • Painting • Flooring</p>
 
 <h1>North Bay Construction Contractors</h1>
 
-<p class="lead">
-Kitchen &amp; Bathroom Remodels • Repairs • Plumbing as part of renovations.
-Serving Northern California. CSLB #1149102.
+<!-- UPDATED SERVICE BULLETS -->
+<ul class="hero__service-list">
+ <li>Kitchen &amp; Bathroom Remodels • Repairs • Plumbing</li>
+ <li>Painting • Roofing • Roofing Repairs • Siding • Windows &amp; Doors</li>
+ <li>Have another project? Just ask — we do it all and we'll get it done for you!</li>
+</ul>
+
+<p class="hero__service-area">
+ Serving Northern California • CSLB #1149102
 </p>
 
 <div class="hero__cta">
+ <a class="btn" href="tel:+17076713253">
+  Call/Text 707-671-3253
+ </a>
 
-<a class="btn" href="tel:+17076713253">
-Call/Text 707-671-3253
-</a>
-
-<a class="btn btn--ghost" href="#contact">
-Request a free estimate
-</a>
-
-</div>
- </div>
+ <a class="btn btn--ghost" href="#contact">
+  Request a free estimate
+ </a>
 </div>
 
-<!-- The original trust details, large logo, and estimate form remain below -->
+</div>
+</div>
+
+<!-- TRUST DETAILS, LOGO AND ESTIMATE FORM -->
 <div class="container hero__inner">
 <div class="hero__content">
 
@@ -978,32 +1094,31 @@ Request a free estimate
 <div class="trustCard">
  <div class="trustCard__title">Fast estimates</div>
  <div class="trustCard__text">
- Clear scope + realistic timelines.
+  Clear scope + realistic timelines.
  </div>
 </div>
 
 <div class="trustCard">
  <div class="trustCard__title">Clean work</div>
  <div class="trustCard__text">
- Respectful jobsite + tidy finish.
+  Respectful jobsite + tidy finish.
  </div>
 </div>
 
 <div class="trustCard">
  <div class="trustCard__title">No surprises</div>
  <div class="trustCard__text">
- Updates + documented changes.
+  Updates + documented changes.
  </div>
 </div>
 
 </div>
 
-<!-- LICENSE NUMBER -->
 <p class="tiny muted" style="margin-top:14px;">
 CSLB License #1149102
 </p>
 
-<!-- EXTRA LARGE COMPANY LOGO -->
+<!-- LARGE COMPANY LOGO -->
 <img
  class="hero__logo"
  src="images/North-Bay-Construction-Contractors-Bay-Area-Ukiah-CA-Willits-CA-Santa-Rosa-CA.jpg"
@@ -1018,7 +1133,6 @@ CSLB License #1149102
 <div class="card">
 
 <h2>Request an estimate</h2>
-
 <p class="muted">
 Send details — we'll follow up quickly.
 </p>
@@ -1115,13 +1229,13 @@ Kitchen and bathroom remodels, refreshes, and upgrades.
 </p>
 <ul class="bullets">
 <li>Drywall, trim, paint</li>
-<li>Flooring & tile (as applicable)</li>
+<li>Flooring &amp; tile (as applicable)</li>
 <li>Finish details</li>
 </ul>
 </article>
 
 <article class="feature">
-<h3>Repairs & maintenance</h3>
+<h3>Repairs &amp; maintenance</h3>
 <p class="muted">
 Small fixes that prevent big problems later.
 </p>
@@ -1140,7 +1254,7 @@ Decks, fences, and exterior improvements.
 <ul class="bullets">
 <li>Deck/fence repair</li>
 <li>Exterior touchups</li>
-<li>Prep & clean finish</li>
+<li>Prep &amp; clean finish</li>
 </ul>
 </article>
 
@@ -1216,7 +1330,6 @@ Decks, fences, and exterior improvements.
 </button>
 
 <div class="paintingDots">
-
 <button class="paintingDot active"
  type="button"
  aria-label="Show painting photo 1"
@@ -1225,14 +1338,14 @@ Decks, fences, and exterior improvements.
 <button class="paintingDot"
  type="button"
  aria-label="Show painting photo 2"></button>
-
 </div>
+
 </div>
 
 <div class="listing__body">
 <h3>Interior Paint + Trim</h3>
 <p class="muted">
-Interior & Exterior Painting • Trim • Touchups
+Interior &amp; Exterior Painting • Trim • Touchups
 </p>
 <a class="link" href="#contact">Get a quote →</a>
 </div>
@@ -1281,19 +1394,17 @@ Schedule walk-through →
 </div>
 
 <div class="muted">Leave a review on Google</div>
-
 </div>
 
 <div style="margin-top:12px;">
-
 <a class="btn"
  target="_blank"
  rel="noopener"
- href="https://www.google.com/maps/search/?api=1&query=North%20Bay%20Construction%20Contractors">
+ href="https://www.google.com/maps/search/?api=1&amp;query=North%20Bay%20Construction%20Contractors">
 Review us on Google
 </a>
-
 </div>
+
 </div>
 </div>
 </section>
@@ -1308,7 +1419,6 @@ Review us on Google
 </div>
 
 <div class="faq">
-
 <details>
 <summary>Do you offer estimates?</summary>
 <div class="faq__body">
@@ -1329,8 +1439,8 @@ Northern California — including Ukiah, Willits and Santa Rosa, plus nearby com
 Yes — we keep scope and timeline clear and communicate changes before work starts.
 </div>
 </details>
-
 </div>
+
 </div>
 </section>
 
@@ -1339,7 +1449,6 @@ Yes — we keep scope and timeline clear and communicate changes before work sta
 <div class="container contact">
 
 <div class="contact__info">
-
 <h2>Get a quote</h2>
 
 <p class="lead">
@@ -1362,18 +1471,16 @@ Call or text, or send a message and we'll reach out quickly.
 
 <!-- MAPS -->
 <div class="mapSection">
-
 <h3 class="mapSection__title">Service locations</h3>
 
 <div class="mapGrid">
 
 <div class="mapCard">
-
 <h4>Ukiah Office</h4>
 
 <div class="mapFrame">
 <iframe
- src="https://www.google.com/maps?q=198%20W%20Perkins%20St,%20Ukiah,%20CA%2095482&output=embed"
+ src="https://www.google.com/maps?q=198%20W%20Perkins%20St,%20Ukiah,%20CA%2095482&amp;output=embed"
  loading="lazy"
  referrerpolicy="no-referrer-when-downgrade"
  allowfullscreen
@@ -1383,16 +1490,14 @@ Call or text, or send a message and we'll reach out quickly.
 <p class="tiny muted">
 198 W Perkins St, Ukiah, CA 95482
 </p>
-
 </div>
 
 <div class="mapCard">
-
 <h4>Santa Rosa Office</h4>
 
 <div class="mapFrame">
 <iframe
- src="https://www.google.com/maps?q=3558%20Round%20Barn%20Boulevard,%20Fountaingrove%20Pkwy%20Suite%20200,%20Santa%20Rosa,%20CA%2095403&output=embed"
+ src="https://www.google.com/maps?q=3558%20Round%20Barn%20Boulevard,%20Fountaingrove%20Pkwy%20Suite%20200,%20Santa%20Rosa,%20CA%2095403&amp;output=embed"
  loading="lazy"
  referrerpolicy="no-referrer-when-downgrade"
  allowfullscreen
@@ -1402,8 +1507,8 @@ Call or text, or send a message and we'll reach out quickly.
 <p class="tiny muted">
 3558 Round Barn Blvd, Suite 200, Santa Rosa, CA 95403
 </p>
-
 </div>
+
 </div>
 </div>
 
@@ -1415,7 +1520,6 @@ CSLB License #1149102
 
 <!-- CONTACT FORM -->
 <div class="contact__form card">
-
 <h3>Send a message</h3>
 
 <form class="form"
@@ -1498,7 +1602,6 @@ const toggle=document.querySelector(".nav__toggle");
 const menu=document.querySelector("#navMenu");
 
 if(toggle && menu){
-
  toggle.addEventListener("click",()=>{
   const open=menu.classList.toggle("isOpen");
   toggle.setAttribute("aria-expanded",String(open));
@@ -1510,7 +1613,6 @@ if(toggle && menu){
    toggle.setAttribute("aria-expanded","false");
   });
  });
-
 }
 
 /* FOOTER YEAR */
@@ -1525,7 +1627,7 @@ if(y) y.textContent=String(new Date().getFullYear());
 
  const icon=button.querySelector(".hero__sound-icon");
  const label=button.querySelector(".hero__sound-label");
- video.muted=true; // Required for reliable background autoplay.
+ video.muted=true;
 
  function updateSoundButton(){
   const on=!video.muted;
@@ -1538,7 +1640,6 @@ if(y) y.textContent=String(new Date().getFullYear());
   if(video.muted){
    video.muted=false;
    video.volume=1;
-   // Calling play directly inside the click also covers browsers that paused autoplay.
    const playback=video.play();
    if(playback && typeof playback.catch==="function"){
     playback.catch(()=>{
@@ -1557,7 +1658,6 @@ if(y) y.textContent=String(new Date().getFullYear());
 
 /* PAINTING SLIDESHOW */
 (function(){
-
  const gallery=document.querySelector(".paintingSlideshow");
  if(!gallery) return;
 
@@ -1572,7 +1672,6 @@ if(y) y.textContent=String(new Date().getFullYear());
  let timer;
 
  function showSlide(index){
-
   currentSlide=(index+slides.length)%slides.length;
 
   slides.forEach((slide,i)=>{
@@ -1591,13 +1690,10 @@ if(y) y.textContent=String(new Date().getFullYear());
     dot.removeAttribute("aria-current");
    }
   });
-
  }
 
  function startAutoSlide(){
-
   clearInterval(timer);
-
   if(slides.length<2) return;
 
   if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){
@@ -1607,7 +1703,6 @@ if(y) y.textContent=String(new Date().getFullYear());
   timer=setInterval(()=>{
    showSlide(currentSlide+1);
   },5000);
-
  }
 
  function changeSlide(direction){
@@ -1658,10 +1753,8 @@ if(y) y.textContent=String(new Date().getFullYear());
 
  showSlide(0);
  startAutoSlide();
-
 })();
 
 </script>
-
 </body>
 </html>
