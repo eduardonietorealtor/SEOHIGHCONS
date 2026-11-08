@@ -328,7 +328,7 @@
     }
     .btn--block { width: 100%; }
 
-    /* FULL-WIDTH CINEMATIC HERO */
+    /* FULL-WIDTH CINEMATIC HERO (DESKTOP & TABLET) */
     .hero {
       position: relative;
       padding: 0 0 72px;
@@ -366,9 +366,9 @@
       pointer-events: none;
       background: linear-gradient(
         180deg,
-        rgba(9, 16, 29, 0.30) 0%,
-        rgba(9, 16, 29, 0.50) 45%,
-        rgba(9, 16, 29, 0.92) 100%
+        rgba(9, 16, 29, 0.25) 0%,
+        rgba(9, 16, 29, 0.45) 45%,
+        rgba(9, 16, 29, 0.90) 100%
       );
     }
 
@@ -1167,6 +1167,7 @@
       .nav__menu a { padding: 10px 12px; }
     }
 
+    /* MOBILE LAYOUT: DEDICATED UNOBSTRUCTED VIDEO ABOVE TEXT */
     @media (max-width: 640px) {
       body { padding-bottom: 68px; }
       .topbar { display: none; }
@@ -1174,16 +1175,87 @@
       .contact__cards {
         grid-template-columns: 1fr;
       }
-      .brand__logo { width: 68px; height: 52px; }
+      .brand__logo { width: 64px; height: 48px; }
       .brand__name { font-size: 14px; }
       .brand__tag { font-size: 11px; }
-      .hero__cinema { min-height: 540px; }
-      .hero__cinema-content { padding-top: 64px; padding-bottom: 28px; }
-      .hero__cinema-content h1 { font-size: 32px; }
-      .hero__brand-lockup { padding: 8px 14px 8px 8px; gap: 10px; }
-      .hero__brand-logo { width: 62px; height: 48px; }
-      .hero__brand-name { font-size: 14px; }
+
+      /* Stack video cleanly on top, text below on mobile */
+      .hero__cinema {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        min-height: auto;
+        background: linear-gradient(180deg, #09101d 0%, var(--bg-deep) 100%);
+      }
+
+      /* Dedicated 16:9 widescreen video player with zero text covering it */
+      .hero__video-wrap {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+        min-height: 225px;
+        max-height: 300px;
+        border-bottom: 2px solid rgba(245, 158, 11, 0.45);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
+      }
+
+      /* Remove dark tint over mobile video so footage is 100% bright & clear */
+      .hero__video-overlay {
+        display: none;
+      }
+
+      /* Place sound toggle neatly in the top-right corner of the video player */
+      .hero__sound-btn {
+        top: 12px;
+        right: 12px;
+        padding: 8px 13px;
+        font-size: 12px;
+        background: rgba(9, 16, 29, 0.85);
+      }
+
+      /* Clean, roomy text container below the video */
+      .hero__cinema-content {
+        padding: 22px 0 30px;
+        width: calc(100% - 32px);
+      }
+
+      .hero__brand-lockup {
+        width: 100%;
+        padding: 10px 12px;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .hero__brand-logo { width: 60px; height: 46px; }
+      .hero__brand-name { font-size: 14px; line-height: 1.15; }
       .hero__brand-sub { font-size: 11px; }
+
+      .pill {
+        font-size: 11px;
+        padding: 6px 11px;
+        line-height: 1.35;
+      }
+
+      .hero__cinema-content h1 {
+        font-size: 28px;
+        line-height: 1.12;
+        margin-bottom: 10px;
+      }
+
+      .hero__service-list {
+        font-size: 14px;
+      }
+
+      .hero__cta {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .hero__cta .btn {
+        width: 100%;
+      }
+
       .bathroomPhotos,
       .paintingSlideshow,
       .specShowcase { height: 280px; }
@@ -1326,7 +1398,7 @@
         <span class="hero__sound-label">Turn sound on</span>
       </button>
 
-      <!-- TEXT OVER VIDEO -->
+      <!-- TEXT OVER VIDEO (DESKTOP) / BELOW VIDEO (MOBILE) -->
       <div class="hero__cinema-content">
 
         <!-- HERO BRAND LOCKUP: Logo + Company Name + Class B License -->
